@@ -17,7 +17,7 @@ docker run -i -t id_imagem /bin/bash
 
 -- executar container com volume
 
-docker run -i -v /home/grogatto/Documentos/Projetos/Cateno/Iris/workspace:/tmp/workspace -t 6107fe3ab48e /bin/bash
+docker run -i -v /home/grogatto/Documentos/Projetos//workspace:/tmp/workspace -t 6107fe3ab48e /bin/bash
 docker run -it -v /ubuntu2:/ubuntu2 test/volume-one-dockerfile
 
 
