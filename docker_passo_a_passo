@@ -1,0 +1,43 @@
+--ajuda no docker
+docker help
+
+-- criar imagem apartir de um dockerfile
+docker build -f dockerfile2 .
+
+--visualizar imagem criada
+docker images
+
+-- executar imagem em um container
+
+e58bbf21c8a0
+
+docker run -i -t 0b7a6792ffff /bin/bash
+
+docker run -i -t id_imagem /bin/bash
+
+-- executar container com volume
+
+docker run -i -v /home/grogatto/Documentos/Projetos/Cateno/Iris/workspace:/tmp/workspace -t 6107fe3ab48e /bin/bash
+docker run -it -v /ubuntu2:/ubuntu2 test/volume-one-dockerfile
+
+
+-- visualizar processo do container criado
+
+docker ps -a
+
+
+-- caso deu exit no container, podemos acessar novamente:
+
+docker start id_container
+docker exec id_container
+
+
+-- docker apagar container e imagens
+docker ps -a -f status=exited
+docker rm $(docker ps -a -f status=exited -q)
+docker rmi $(docker images -a -q)
+
+
+
+---rascunho
+docker exec 2d990bbd8017
